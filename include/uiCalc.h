@@ -28,10 +28,13 @@ private slots:
     void equalClicked();
     void clearClicked();
     void pointClicked();
+    void buttonPressAnimate();
+    void buttonReleaseAnimate();
 
 private:
     Ui::Calc *ui;
     QList<QPushButton *>allButtons;
+    QMap<QPushButton *,QRect> buttonSizeBeforeAnimate;
 
     QString pendingOperator; // 当前操作符
     double accumulator = 0; // 累计结果
