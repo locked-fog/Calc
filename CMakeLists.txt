@@ -18,8 +18,11 @@ add_definitions(-DWINVER=0x0A00)
 qt_add_executable(Calc
     src/main.cpp
     src/uiCalc.cpp
+    src/uiMain.cpp
     include/uiCalc.h
     include/uiCalc.ui
+    include/uiMain.h
+    include/uiMain.ui
 )
 
 # 链接 Qt 库
