@@ -27,7 +27,7 @@ UiMain::UiMain(QMainWindow *parent) : QMainWindow(parent), ui(new Ui::uiMain){
     connect(ui->action_Close, &QAction::triggered, this, &UiMain::closeClicked);
     connect(ui->action_Calc, &QAction::triggered, this, &UiMain::calcClicked);
 
-    enableMica(this);
+    QtWin::enableMica(this);
 }
 
 UiMain::~UiMain(){

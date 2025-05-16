@@ -101,7 +101,7 @@ UiCalc::UiCalc(QWidget *parent) : QWidget(parent), ui(new Ui::Calc){
     // DwmSetWindowAttribute(hwnd, DWMWA_SYSTEMBACKDROP_TYPE, &policy, sizeof(policy));
     // const MARGINS margins = {-1, -1, -1, -1};
     // DwmExtendFrameIntoClientArea(hwnd, &margins);
-    enableMica(this);
+    QtWin::enableMica(this);
 }
 
 UiCalc::~UiCalc(){
