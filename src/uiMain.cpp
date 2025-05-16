@@ -7,6 +7,7 @@
 #include <QApplication>
 #include "../include/uiCalc.h"
 #include <thread>
+#include <qtwMica.h>
 
 UiMain::UiMain(QMainWindow *parent) : QMainWindow(parent), ui(new Ui::uiMain){
     ui->setupUi(this);
@@ -25,6 +26,8 @@ UiMain::UiMain(QMainWindow *parent) : QMainWindow(parent), ui(new Ui::uiMain){
     connect(ui->action_Open, &QAction::triggered, this, &UiMain::openClicked);
     connect(ui->action_Close, &QAction::triggered, this, &UiMain::closeClicked);
     connect(ui->action_Calc, &QAction::triggered, this, &UiMain::calcClicked);
+
+    enableMica(this);
 }
 
 UiMain::~UiMain(){

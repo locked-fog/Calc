@@ -12,6 +12,8 @@
 #include <QWindow>
 #include <dwmapi.h>
 #include <QGuiApplication>
+#include <qtwMica.h>
+#include <qtwException.h>
 
 #ifndef DWMWA_SYSTEMBACKDROP_TYPE
 #define DWMWA_SYSTEMBACKDROP_TYPE 38
@@ -94,11 +96,12 @@ UiCalc::UiCalc(QWidget *parent) : QWidget(parent), ui(new Ui::Calc){
     //init display
     ui->display->setText("0");
 
-    HWND hwnd = reinterpret_cast<HWND>(this->winId());
-    DWORD policy = DWM_SYSTEMBACKDROP_TYPE_MICA;
-    DwmSetWindowAttribute(hwnd, DWMWA_SYSTEMBACKDROP_TYPE, &policy, sizeof(policy));
-    const MARGINS margins = {-1, -1, -1, -1};
-    DwmExtendFrameIntoClientArea(hwnd, &margins);
+    // HWND hwnd = reinterpret_cast<HWND>(this->winId());
+    // DWORD policy = DWM_SYSTEMBACKDROP_TYPE_MICA;
+    // DwmSetWindowAttribute(hwnd, DWMWA_SYSTEMBACKDROP_TYPE, &policy, sizeof(policy));
+    // const MARGINS margins = {-1, -1, -1, -1};
+    // DwmExtendFrameIntoClientArea(hwnd, &margins);
+    enableMica(this);
 }
 
 UiCalc::~UiCalc(){
