@@ -12,7 +12,7 @@
 #include <QWindow>
 #include <dwmapi.h>
 #include <QGuiApplication>
-#include <qtwMica.h>
+#include <qtwDWM.h>
 #include <qtwException.h>
 
 #ifndef DWMWA_SYSTEMBACKDROP_TYPE

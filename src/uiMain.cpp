@@ -7,7 +7,7 @@
 #include <QApplication>
 #include "../include/uiCalc.h"
 #include <thread>
-#include <qtwMica.h>
+#include <qtwDWM.h>
 
 UiMain::UiMain(QMainWindow *parent) : QMainWindow(parent), ui(new Ui::uiMain){
     ui->setupUi(this);
